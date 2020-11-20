@@ -1,0 +1,67 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+
+}
+
+
+
+body{
+background-image: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+}
+
+#addTab{
+    position: absolute;
+    top:40%;
+    left:25%;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+input{
+    background-color: black;
+    margin:2px;
+    color:white;
+}
+
+#displayTab{
+    position: absolute;
+    top:50%;
+    left:25%;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width:500px;
+background-color: cornflowerblue;
+border: 2px solid black;
+box-shadow: 2px 2px;
+background:linear-gradient(90deg,#CCFFFF,#FFCCCC)
+}
+
+#addMore,#clear{
+    border-radius: 5px;
+    color: white;
+    background-color: #111213;
+    padding: 5px 10px 8px 10px;
+
+}
+
+button:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+    /* Only change code below this line */
+animation-fill-mode:forwards;
+    /* Only change code above this line */
+  }
+  @keyframes background-color {
+    100% {
+      background-color: #4b4f53;
+    }
+  }
