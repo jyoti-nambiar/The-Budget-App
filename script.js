@@ -50,7 +50,6 @@ function addItems(e) {
 
 }
 
-console.log(entryList);
 function clearText(arrayList) {
     arrayList.forEach(entry => {
         entry.value = "";
@@ -70,12 +69,12 @@ function calculateTotal(type, entryList) {
 
 };
 
-var clearText = document.querySelector(".clear");
-clearText.addEventListener("click", clearFunc);
+document.querySelector("#clear").addEventListener("click", clearFunction)
 
-function clearFunc() {
+
+function clearFunction(e) {
+    e.preventDefault();
     location.reload();
-
-};
+}
 
 
