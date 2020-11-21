@@ -70,6 +70,12 @@ function calculateTotal(type, entryList) {
 
 };
 
+var clearText = document.querySelector(".clear");
+clearText.addEventListener("click", clearFunc);
 
+function clearFunc() {
+    location.reload();
+
+};
 
 
