@@ -1,40 +1,75 @@
+var addButton = document.querySelector("#addMore");
+addButton.addEventListener("click", addItems);
+
+
 var entryList = [];
-function list(e) {
+function addItems(e) {
     e.preventDefault();
 
     var selectOption = document.querySelector("#chooseOption").value;
     if (selectOption === "+") {
-        var description = document.querySelector("#description").value;
-        var amount = document.querySelector("#amount").value;
+        var description = document.querySelector("#description");
+        var amount = document.querySelector("#amount");
+        var income = {
+            type: "income",
+            title: description.value,
+            sum: Number(amount.value)
+        };
+        entryList.push(income);
+        var totalInkomster = document.querySelector(".inkomsterSpan");
+        totalInkomster.textContent = calculateTotal("income", entryList);
 
-        var sum = Number(amount);
-        entryList.push(sum);
-        var createDiv = document.createElement("div");
-        createDiv.textContent = description + ":" + amount;
-        document.querySelector("#inkomster").appendChild(createDiv);
+        var createNewLi = document.createElement("li");
+        createNewLi.textContent = income.title + ":" + income.sum;
+        document.querySelector(".inkomstList").appendChild(createNewLi);
+        clearText([description, amount]);
 
     } else if (selectOption === "-") {
-        var description = document.querySelector("#description").value;
-        var amount = document.querySelector("#amount").value;
+        var description = document.querySelector("#description");
+        var amount = document.querySelector("#amount");
+        var expense = {
+            type: "expense",
+            title: description.value,
+            sum: Number(amount.value)
+        };
+        entryList.push(expense);
+        var totalExpense = document.querySelector(".konstnadSpan")
+        totalExpense.textContent = calculateTotal("expense", entryList);
 
-        var sum = Number(-amount);
-        entryList.push(sum);
-        var createDiv = document.createElement("div");
-        createDiv.textContent = description + ":" + amount;
-        document.querySelector("#utgifter").appendChild(createDiv);
-
+        var createNewLi = document.createElement("li");
+        createNewLi.textContent = expense.title + ":" + expense.sum;
+        document.querySelector(".kostnadList").appendChild(createNewLi);
+        clearText([description, amount]);
 
     }
+    var income = calculateTotal("income", entryList);
+    var expense = calculateTotal("expense", entryList);
 
-    var total = 0;
-    for (var i = 0; i < entryList.length; i++) {
-        total += entryList[i];
+    document.querySelector(".SparandeSpan").textContent = (income - expense);
 
-    }
-    document.querySelector("#balance").textContent = total;
+
 }
 
-var addButton = document.querySelector("#addMore");
-addButton.addEventListener("click", list);
+console.log(entryList);
+function clearText(arrayList) {
+    arrayList.forEach(entry => {
+        entry.value = "";
+
+    });
+
+}
+
+function calculateTotal(type, entryList) {
+    var sum = 0;
+    entryList.forEach(entry => {
+        if (entry.type === type) {
+            sum += entry.sum;
+        }
+    });
+    return sum;
+
+};
+
+
 
 

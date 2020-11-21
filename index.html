@@ -4,39 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Budget App</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div id="addTab">
-        <select name="category" id="chooseOption">
-            <option id="chosenPlus" value="+"> + </option>
-            <option id="chosenMinus" value="-"> - </option>
-        </select>
-        <label for="description">
-            <input type="text" name="" id="description" placeholder="beskrivning" required>
-        </label>
-        <label for="amount"><input type="text" name="" id="amount" placeholder="0kr" required>
-        </label>
-        <button id="addMore">Lägg till </button>
-        <button id="clear">Rensa</button>
+    <h1>Budget App</h1>
+    <div class="addTab">
+        <div id="incomeDiv" class="addTab--div">
+            <h2>Totalt Inkomster :</h2>
+            <span class=inkomsterSpan>
+
+            </span>
+        </div>
+
+        <div id="ExpenseDiv" class="addTab--div">
+            <h2>Totalt Kostnader:</h2>
+            <span class=konstnadSpan>
+
+            </span>
+
+        </div>
+
+        <div id="ExpenseDiv" class="addTab--div">
+            <h2>Sparande:</h2>
+            <span class=SparandeSpan>
+
+            </span>
+
+        </div>
     </div>
 
-    <div id="displayTab">
-        <div id="balance">
 
-            <h2>Total Kvar:</h2>
+    <div class="displayTab">
+        <form action="">
 
+            <select name="category" id="chooseOption">
+                <option id="chosenPlus" value="+"> + </option>
+                <option id="chosenMinus" value="-"> - </option>
+            </select>
+            <label for="description">
+                <input type="text" name="" id="description" placeholder="beskrivning" required>
+            </label>
+            <label for="amount"><input type="text" name="" id="amount" placeholder="summan" required>
+            </label><br>
+            <span class="buttonSpan"><button id="clear">Rensa</button>
+                <button id="addMore">Lägg till </button></span>
+
+
+        </form>
+
+        <div id="kostnad" class="arrayList">
+            <h2>Kostnader:</h2>
+            <ul class="kostnadList">
+
+            </ul>
         </div>
-        <div id="utgifter">
-            <h2>Utgifter:</h2>
-            <ul></ul>
-        </div>
-        <div id="inkomster">
+        <div id="inkomst" class="arrayList">
             <h2>Inkomster:</h2>
+            <ul class="inkomstList">
 
+            </ul>
         </div>
     </div>
 </body>
