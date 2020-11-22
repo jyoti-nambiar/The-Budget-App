@@ -81,6 +81,7 @@ button:hover {
   100% {
     background-color: #4b4f53; } }
 
+/*mobile version*/
 @media (max-width: 600px) {
   h2 {
     font-size: 20px; }
@@ -98,6 +99,7 @@ button:hover {
     top: 50%;
     max-width: 80%; } }
 
+/*tab version */
 @media (max-width: 1030px) {
   .addTab {
     top: 10%; }
