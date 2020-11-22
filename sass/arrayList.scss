@@ -1,0 +1,58 @@
+.displayTab{          /*parent element */
+  color:black;
+  position: absolute;
+  top:50%;
+left:20%;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+max-width: 100%;
+width:960px;
+background-color: cornflowerblue;
+box-shadow: 2px 2px;
+padding:15px;
+}
+
+select{
+height:30px;
+border:2px solid black;
+border-radius: 5px;
+
+}
+input{
+  background-color:peachpuff;
+  margin:5px;
+  height:30px;
+  text-align: center;
+  box-shadow: 1px 1px;
+}
+
+.buttonSpan{
+  display:flex;
+  justify-content: center;
+}
+
+
+button{
+margin:10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #111213;
+  padding: 5px;
+  height:30px;
+
+}
+
+button:hover {
+  animation-name: background-color;
+  animation-duration: 500ms;
+
+animation-fill-mode:forwards;
+
+}
+@keyframes background-color {
+  100% {
+    background-color: #4b4f53;
+  }
+}

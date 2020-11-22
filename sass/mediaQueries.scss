@@ -1,0 +1,68 @@
+/*mobile version*/
+ @media(max-width:600px){
+  h2{
+
+      font-size: 20px;;
+  }
+  .addTab{
+
+top:10%;
+border:1px solid black;
+  }
+  
+
+.addTab--div{
+  display:block;
+  width:200px;
+  height:50px;
+
+}
+
+form{
+display:flex;
+flex-direction:column;
+
+
+}
+  .displayTab{ 
+top:50%;
+max-width: 80%;
+
+   }
+
+
+}
+/*tab version */
+@media(max-width:1030px){
+  .addTab{
+
+    top:10%;
+    
+      }
+
+      .displayTab{ 
+        top:50%;
+        left:10%;
+        width:700px;
+        height:400px;
+        max-width: 80%;
+  
+     }
+
+     select{
+       width:25px;
+      height:40px;
+     }
+
+     input{
+    font-size:20px;
+      height:40px;
+     }
+
+     button{
+
+      height:40px;
+       }
+
+
+}

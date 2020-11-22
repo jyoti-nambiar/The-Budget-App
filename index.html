@@ -10,8 +10,12 @@
 </head>
 
 <body>
+
     <h1>Budget App</h1>
+    <!--Total to display the calculateTotal function for Inkomster, kostnader and sparande -->
+
     <div class="addTab">
+
         <div id="incomeDiv" class="addTab--div">
             <h2>Totalt Inkomster :</h2>
             <span class=inkomsterSpan>
@@ -36,7 +40,7 @@
         </div>
     </div>
 
-
+    <!--The form functions for input values, select tab and buttons, -->
     <div class="displayTab">
         <form action="">
 
@@ -45,9 +49,9 @@
                 <option id="chosenMinus" value="-"> - </option>
             </select>
             <label for="description">
-                <input type="text" name="" id="description" placeholder="beskrivning">
+                <input type="text" name="" id="description" placeholder="beskrivning" required>
             </label>
-            <label for="amount"><input type="text" name="" id="amount" placeholder="summan">
+            <label for="amount"><input type="text" name="" id="amount" placeholder="summan" required>
             </label><br>
             <span class="buttonSpan"><button id="clear">Rensa</button>
                 <button id="addMore">Lägg till </button></span>
@@ -55,6 +59,7 @@
 
         </form>
 
+        <!--Arrylist for inkomstArray and kostnadArray-->
         <div id="kostnad" class="arrayList">
             <h2>Kostnader:</h2>
             <ul class="kostnadList">
