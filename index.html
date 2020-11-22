@@ -31,7 +31,7 @@
 
         </div>
 
-        <div id="ExpenseDiv" class="addTab--div">
+        <div id="SavingsDiv" class="addTab--div">
             <h2>Sparande:</h2>
             <span class=SparandeSpan>
 
@@ -42,16 +42,16 @@
 
     <!--The form functions for input values, select tab and buttons, -->
     <div class="displayTab">
-        <form action="">
+        <form action="submit">
 
             <select name="category" id="chooseOption">
                 <option id="chosenPlus" value="+"> + </option>
                 <option id="chosenMinus" value="-"> - </option>
             </select>
             <label for="description">
-                <input type="text" name="" id="description" placeholder="beskrivning" required>
+                <input type="text" name="description" id="description" placeholder="beskrivning" required>
             </label>
-            <label for="amount"><input type="text" name="" id="amount" placeholder="summan" required>
+            <label for="amount"><input type="text" name="amount" id="amount" placeholder="summan" required>
             </label><br>
             <span class="buttonSpan"><button id="clear">Rensa</button>
                 <button id="addMore">Lägg till </button></span>
