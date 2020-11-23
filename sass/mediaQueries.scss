@@ -1,34 +1,39 @@
 /*mobile version*/
- @media(max-width:600px){
+
+@media(max-width:600px){
   h2{
 
       font-size: 20px;;
   }
   .addTab{
-
 top:10%;
-border:1px solid black;
   }
   
 
 .addTab--div{
   display:block;
-  width:200px;
-  height:50px;
+  width:50vw;
+  height:10vh;
 
 }
 
 form{
+  margin:5px;
 display:flex;
 flex-direction:column;
 
-
 }
-  .displayTab{ 
-top:50%;
-max-width: 80%;
 
+
+  .displayTab{ 
+width:10vw;
+padding:5px;
    }
+   select{
+    width:50px;
+    margin:0 auto;
+   }
+ 
 
 
 }
@@ -40,23 +45,31 @@ max-width: 80%;
     
       }
 
+      .addTab--div{
+        display:block;
+        width:50vw;
+        height:10vh;
+      
+      }
+
       .displayTab{ 
         top:50%;
         left:10%;
         width:700px;
         height:400px;
         max-width: 80%;
+    
   
-     }
-
-     select{
-       width:25px;
-      height:40px;
      }
 
      input{
     font-size:20px;
       height:40px;
+     }
+
+     select{
+      width:35px;
+      
      }
 
      button{

@@ -8,18 +8,23 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 max-width: 100%;
-width:960px;
+height:auto;
+width:80vw;
 background-color: cornflowerblue;
 box-shadow: 2px 2px;
 padding:15px;
 }
 
 select{
+  width:30px;
 height:30px;
 border:2px solid black;
 border-radius: 5px;
 
 }
+
+
+
 input{
   background-color:peachpuff;
   margin:5px;

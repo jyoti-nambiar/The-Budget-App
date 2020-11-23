@@ -24,8 +24,8 @@ h1 {
 .addTab--div {
   /*child element of parent addTab*/
   display: inline-block;
-  height: 100px;
-  width: 300px;
+  height: 50vh;
+  width: 30vw;
   border: 5px solid black;
   border-radius: 5px;
   box-shadow: 2px 2px;
@@ -43,12 +43,14 @@ h1 {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  width: 960px;
+  height: auto;
+  width: 80vw;
   background-color: cornflowerblue;
   box-shadow: 2px 2px;
   padding: 15px; }
 
 select {
+  width: 30px;
   height: 30px;
   border: 2px solid black;
   border-radius: 5px; }
@@ -86,34 +88,40 @@ button:hover {
   h2 {
     font-size: 20px; }
   .addTab {
-    top: 10%;
-    border: 1px solid black; }
+    top: 10%; }
   .addTab--div {
     display: block;
-    width: 200px;
-    height: 50px; }
+    width: 50vw;
+    height: 10vh; }
   form {
+    margin: 5px;
     display: flex;
     flex-direction: column; }
   .displayTab {
-    top: 50%;
-    max-width: 80%; } }
+    width: 10vw;
+    padding: 5px; }
+  select {
+    width: 50px;
+    margin: 0 auto; } }
 
 /*tab version */
 @media (max-width: 1030px) {
   .addTab {
     top: 10%; }
+  .addTab--div {
+    display: block;
+    width: 50vw;
+    height: 10vh; }
   .displayTab {
     top: 50%;
     left: 10%;
     width: 700px;
     height: 400px;
     max-width: 80%; }
-  select {
-    width: 25px;
-    height: 40px; }
   input {
     font-size: 20px;
     height: 40px; }
+  select {
+    width: 35px; }
   button {
     height: 40px; } }
